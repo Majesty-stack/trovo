@@ -1,0 +1,316 @@
+/* General Styling */
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+h1, h2, h3 {
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Header */
+/* Updated Header Styles */
+.header {
+    position: relative;
+    background-color: #fff; /* Sets the background color to white */
+    padding: 8px 0; /* Vertical padding; adjust as needed */
+    width: 100vw; /* Extends the header to cover the entire viewport width */
+    border-bottom: none /* Border-bottom for separation */
+}
+
+.header .container {
+    max-width: 1200px; /* Set a max-width for content centering */
+    margin: 0 auto; /* Center the container */
+    padding: 0 10px; /* Optional padding for responsive spacing */
+    display: flex;
+    justify-content: space-between; /* Distributes space between items */
+    align-items: center; /* Aligns items vertically */
+}
+
+
+.header .navbar-toggler {
+    border: none;
+    background: none;
+   
+}
+
+.header .navbar-brand {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.header .logo-image {
+    width: 110px;
+    height: 70px;
+    position: absolute; /* Center logo independently */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.header nav .nav-link {
+    color: #333;
+    margin-right: 15px;
+    text-decoration: none;
+}
+
+.header nav .nav-link:hover {
+    color: #0056b3;
+}
+/* Updated Sticky Header Styles */
+.header {
+    display: flex;
+    position: sticky; /* Or fixed if you prefer */
+    justify-content: space-between; /* Pushes content to the edges */
+    top: 0;
+    z-index: 10; /* Lower z-index value for the header */
+    background-color: #fff;
+    width: 100vw;
+    height: 95px;
+    border-bottom: 1px solid #333;
+}
+.navbar-toggler {
+    position: absolute; /* Position it independently within the header */
+    left: 0; /* Aligns the button to the extreme left */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%);
+    border: none;
+    background: none;
+    font-size: 24px;
+}
+/* Media Query for Desktop View */
+@media (min-width: 768px) {
+    /* Show toggle button at the extreme right end on desktop */
+    .navbar-toggler {
+        display: block;
+        margin-left: auto;
+        margin-left: 5px;
+    }
+}
+
+.btn-custom {
+    background-color: #1B4E73; /* Set background color */
+    color: #fff; /* White text color for contrast */
+    border: none; /* Remove default border */
+    padding: 10px 20px; /* Add some padding */
+    border-radius: 5px; /* Rounded corners, optional */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+.btn-custom:hover {
+    background-color: #002244; /* Darken slightly on hover */
+}
+
+
+
+/* Media Query for Desktop View */
+@media (min-width: 768px) {
+    .sign-up-btn {
+        position: absolute; /* Position it independently within the header */
+        right: 30px; /* Aligns the button to the extreme right */
+        top: 50%; /* Center vertically */
+        transform: translateY(-50%);
+        border-radius: 5px 5px 5px 5px;
+    }
+}
+
+
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background-color: #1B4E73;
+    overflow-x: hidden;
+    transition: 0.5s;
+    z-index: 1001; /* Ensure it's higher than the header */
+    padding-top: 60px;
+}
+
+
+/* Show the sidebar fully */
+.sidebar.open {
+    width: 250px; /* Adjust width as needed */
+}
+
+
+.sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #f1f1f1;
+    display: block;
+    transition: 0.3s;
+    margin-top: 20px;
+}
+
+.sidebar a:hover {
+    color: #ddd;
+}
+
+.sidebar .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    font-size: 36px;
+}
+
+/* Hide elements on small screens */
+@media (max-width: 767.98px) {
+    .header nav {
+        display: none;
+    }
+
+    .header .navbar-toggler {
+        display: block;
+    }
+}
+.navigation a {
+    text-decoration: none;
+    color: #1B4E73; /* Set your preferred text color */
+    font-weight: bold;
+    padding: 8px 12px; /* Add padding for spacing */
+    transition: color 0.3s, background-color 0.3s; /* Add smooth transitions for hover effects */
+    border-radius: 4px; /* Rounded corners */
+}
+
+.navigation a:hover {
+    color: #fff; /* Change text color on hover */
+    background-color: #0056b3; /* Change background color on hover */
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+    margin-left: 25px;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #1B4E73;
+    overflow-x: hidden;
+    transition: 0.3s;
+    padding-top: 60px;
+    z-index: 1;
+}
+.sidebar a {
+    padding: 10px 15px;
+    font-size: 18px;
+    color: #ffffff;
+    display: block;
+    transition: 0.3s;
+    text-transform: uppercase;
+}
+.sidebar a:hover {
+    background-color: #007bff;
+    color: #ffffff;
+}
+.closebtn {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    font-size: 36px;
+    color: #f1f1f1;
+    cursor: pointer;
+    z-index: 1001; /* Ensure it is above most other elements */
+}
+
+
+
+
+
+.ver {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.accver-container {
+    padding: 40px;
+    background-color: #1B4E73;
+}
+
+.accverBox {
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 70px;
+    margin: 50px;
+}
+
+.ver button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 310px;
+    height: 40px;
+    padding: 15px 0; /* Adjusted for consistent padding */
+    margin-top: 50px;
+    margin-bottom: 30px;
+    border-radius: 0px 20px 0px 0px;
+    font-size: 16px;
+    background-color: #1B4E73; /* Added background for button */
+    color: white; /* Added text color */
+    border: none; /* Optional: Remove default border */
+}
+
+.ver img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 40px;
+}
+
+.ver h2 {
+    color: #1B4E73;
+    font-weight: 350; /* Corrected: Font weight values like 350 are invalid */
+    font-size: 30px;
+    margin-bottom: 25px;
+}
+
+.congWriteup {
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    font-weight: 200; /* Corrected: Font weight values should be numeric without 'px' */
+    font-size: 20px;
+    color: #8f8585;
+}
+
+.continue {
+    background-color: #1B4E73;
+    color: white;
+}
+
+#emailinputed {
+    color: black;
+}
+
+@media (max-width: 767.98px) {
+    .ver button {
+        margin: 0; /* Reset margins for mobile */
+        width: 80%; /* Adjust width for mobile view */
+        height: 60px;
+
+    }
+}
+
+    
